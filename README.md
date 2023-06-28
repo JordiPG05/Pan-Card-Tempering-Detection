@@ -1,5 +1,18 @@
 # Pan Card Tempering Detection
- 
+
+## About this project
+
+[ES] 
+Este proyecto tiene como objetivo utilizar la visión por computadora para detectar la manipulación de tarjetas bancarias. El sistema permitirá a las organizaciones verificar la autenticidad de las identificaciones proporcionadas, como tarjetas Adha y tarjetas bancarias, las cuales a veces pueden ser falsificadas.
+
+En lugar de depender de sistemas de verificación en línea que pueden ser lentos, este proyecto permitirá una verificación instantánea. El proceso implica cargar una imagen de la tarjeta bancaria y verificar si coincide con la imagen original.
+
+[EN]
+This project aims to use computer vision to detect bank card tampering. The system will enable organizations to verify the authenticity of provided IDs, such as Adha cards and bank cards, which can sometimes be forged.
+
+Instead of relying on online verification systems that can be slow, this project will enable instant verification. The process involves uploading an image of the bank card and verifying if it matches the original image.
+
+
 ### Step to run application:
 
 - Step 1:	Create the copy of the project 
