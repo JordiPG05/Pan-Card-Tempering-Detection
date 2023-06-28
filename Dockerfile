@@ -11,7 +11,7 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # Copiamos el código fuente de la aplicación
-COPY /app .
+COPY app .
 COPY app.py .
 COPY config.py .
 
