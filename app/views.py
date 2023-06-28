@@ -20,14 +20,9 @@ app.config['GENERATED_FILE'] = 'app/static/generated'
 # Definir la ruta raiz
 @app.route("/", methods=["GET", "POST"]) # Añadimos solicitudes GET y POST
 def index():
-
-	# Ejecutar si la solicitud es GET
-	if request.method == "GET":
-	    return render_template("index.html") # Carga la plantilla html
-
-	# Ejecutar si la solicitud es POST
-    #En este caso se realizara el mismo procedimiento que en el NoteBook
-    
+    # Ejecutar si la solicitud es GET
+    if request.method == "GET":
+         return render_template("index.html") # Carga la plantilla html
     if request.method == "POST":
                 # Cargamos la imagen
                 file_upload = request.files['file_upload']
