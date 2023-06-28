@@ -11,12 +11,10 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # Copiamos el código fuente de la aplicación
-COPY app .
-COPY app.py .
-COPY config.py .
+COPY . /app
 
 # Exponemos el puerto en el que se ejecutará la aplicación
-EXPOSE 5000
+EXPOSE $PORT
 
 # Comando para ejecutar la aplicación
-CMD ["python", "app.py"]
+CMD gunicorn -b :$PORT app:app
