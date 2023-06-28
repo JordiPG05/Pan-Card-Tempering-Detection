@@ -1,8 +1,8 @@
 # Pan Card Tempering Detection
  
-Step to run application:
+### Step to run application:
 
-- Step 1:	Create the copy of the project.
+- Step 1:	Create the copy of the project 
 
 - Step 2: Open command prompt and change your current path 
 to folder where you can find 'app.py' file.
@@ -21,3 +21,14 @@ python app.py
 You will get url copy it and paste in browser.
 
 - Step 7: You have sample_data folder where you can get images to test.
+
+### Step to run the application in Docker:
+
+- Step 1: Create the copy of the project (`git clone <url_of_repository>`).
+
+- Step 2: Open the command prompt and change the current path 
+to the folder where the 'app.py' file is located. (`cd <directory_name>`)
+
+- Step 3: Run the command to create the image (`docker build -t pan-card:latest .`)
+
+- Step 4: Run the command to create and run the container (`docker run --name my-container -d pan-card:latest`)
