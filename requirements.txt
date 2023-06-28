@@ -3,3 +3,4 @@ imutils
 opencv-python
 Pillow
 scikit-image
+gunicorn==20.1.0
