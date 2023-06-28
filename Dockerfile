@@ -1,20 +1,29 @@
-# Usamos una imagen base de Python
-FROM python:3.11.2
+# Usamos una imagen base de Python  
+FROM python:3.11.2 
 
-# Establecemos un directorio de trabajo
-WORKDIR /app
+# Instalamos las dependencias necesarias para OpenCV
+RUN apt-get update && apt-get install -y \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    libgl1-mesa-dev
 
-# Copiamos los requerimientos de la aplicación
-COPY requirements.txt requirements.txt
+# Establecemos un directorio de trabajo  
+WORKDIR /app  
 
-# Instalamos los requerimientos
-RUN pip install -r requirements.txt
+# Copiamos los requerimientos de la aplicación  
+COPY requirements.txt requirements.txt  
 
-# Copiamos el código fuente de la aplicación
-COPY . /app
+# Instalamos los requerimientos  
+RUN pip install -r requirements.txt  
 
-# Exponemos el puerto en el que se ejecutará la aplicación
-EXPOSE $PORT
+# Copiamos el código fuente de la aplicación  
+COPY . /app   
+COPY app.py .  
+COPY config.py .  
 
-# Comando para ejecutar la aplicación
-CMD gunicorn -b :$PORT app:app
+# Exponemos el puerto en el que se ejecutará la aplicación  
+EXPOSE 5000  
+
+# Comando para ejecutar la aplicación  
+CMD ["python", "app.py"]
