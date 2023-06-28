@@ -1,6 +1,5 @@
 Flask
 imutils
-Keras
 opencv-python
 Pillow
 scikit-image
