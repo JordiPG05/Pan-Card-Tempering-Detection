@@ -1,9 +1,10 @@
-numpy
 Flask==1.1.1
 imutils==0.5.3
 Keras==2.4.0
 opencv-python
 Pillow==8.0.1
 tensorflow
+numpy==1.19.5
 scikit-image==0.17.2
+
 
