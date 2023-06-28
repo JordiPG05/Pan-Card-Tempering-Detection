@@ -26,9 +26,9 @@ def index():
 	    return render_template("index.html") # Carga la plantilla html
 
 	# Ejecutar si la solicitud es POST
-    '''
-    En este caso se realizara el mismo procedimiento que en el NoteBook'''
-	if request.method == "POST":
+    #En este caso se realizara el mismo procedimiento que en el NoteBook
+    
+    if request.method == "POST":
                 # Cargamos la imagen
                 file_upload = request.files['file_upload']
                 filename = file_upload.filename
